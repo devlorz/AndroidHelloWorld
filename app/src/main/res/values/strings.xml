@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">HelloWorld</string>
     <string name="calculate">Calculate</string>
+    <string name="zero">0</string>
+    <string name="equal_zero">= 0</string>
+    <string name="i_agree">I agree</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiple">*</string>
+    <string name="divide">/</string>
 </resources>

@@ -49,7 +49,7 @@
             android:background="@drawable/ninepatch_lab"
             android:gravity="center"
             android:inputType="number"
-            android:text="0" />
+            android:text="@string/zero" />
 
         <EditText
             android:id="@+id/editText2"
@@ -59,14 +59,14 @@
             android:background="@drawable/ninepatch_lab"
             android:gravity="center"
             android:inputType="number"
-            android:text="0" />
+            android:text="@string/zero" />
 
         <TextView
             android:id="@+id/tvResult"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="= 0" />
+            android:text="@string/equal_zero" />
 
     </LinearLayout>
 
@@ -80,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="I agree" />
+        android:text="@string/i_agree" />
 
     <RadioGroup
         android:id="@+id/rgOperator"
@@ -93,28 +93,28 @@
             android:id="@id/rbPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+" />
+            android:text="@string/plus" />
 
         <RadioButton
             android:id="@+id/rbMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/radio_button_margin_left"
-            android:text="-" />
+            android:text="@string/minus" />
 
         <RadioButton
             android:id="@+id/rbMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/radio_button_margin_left"
-            android:text="*" />
+            android:text="@string/multiple" />
 
         <RadioButton
             android:id="@+id/rbDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/radio_button_margin_left"
-            android:text="/" />
+            android:text="@string/divide" />
 
     </RadioGroup>
 
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@drawable/btn_default_normal"
+            android:background="@drawable/selector_btn_default"
             android:scaleType="fitXY"
             android:src="@drawable/ic_launcher" />
 
