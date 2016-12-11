@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -134,6 +135,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:indeterminate="true" />
+
+            <com.leelorz.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.leelorz.helloworld.CustomViewGroup>
+
+            <com.leelorz.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.leelorz.helloworld.CustomViewGroup>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_spotify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="#7ab800"
+                fancy:fb_focusColor="#9bd823"
+                fancy:fb_fontIconResource="&#xf04b;"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="SHUFFLE PLAY"
+                fancy:fb_textColor="#FFFFFF" />
 
             <com.leelorz.helloworld.CustomView
                 android:layout_width="match_parent"
