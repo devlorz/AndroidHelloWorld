@@ -1,5 +1,6 @@
 package com.leelorz.helloworld;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -131,6 +132,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     "Result = " + result,
                     Toast.LENGTH_SHORT)
                     .show();
+
+            Intent intent = new Intent(MainActivity.this,
+                    SecondActivity.class
+            );
+            intent.putExtra("result", result);
+            startActivity(intent);
         }
     }
 
