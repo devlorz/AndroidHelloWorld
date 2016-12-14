@@ -18,6 +18,16 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
         sum = intent.getIntExtra("result", 0);
 
+        Bundle bundle = intent.getBundleExtra("cBundle");
+        int x = bundle.getInt("x");
+        int y = bundle.getInt("y");
+        int z = bundle.getInt("z");
+
+        //CoordinateSerializable c2 = (CoordinateSerializable)
+        //      intent.getSerializableExtra("cSerializable");
+
+        CoordinateParcelable c3 = intent.getParcelableExtra("cParcelable");
+
         initInstances();
     }
 
