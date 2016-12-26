@@ -1,6 +1,7 @@
 package com.leelorz.helloworld;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Point;
 import android.os.PersistableBundle;
 import android.provider.MediaStore;
@@ -40,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getResources().getBoolean(R.bool.portrait_only)) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+
         setContentView(R.layout.activity_main);
 
         initInstances();
@@ -162,7 +168,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             c3.z = 20;
             intent.putExtra("cParcelable", c3);
 
-            // startActivity(intent);
+            startActivityForResult(intent, 12345);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if it is a result from secondactivity
+        if (requestCode == 12345) {
+            if (resultCode == RESULT_OK) {
+                // get data from data's extra
+                String resultText = data.getStringExtra("result");
+                Toast.makeText(MainActivity.this, resultText, Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -207,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // save things here
 
     }
+
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {

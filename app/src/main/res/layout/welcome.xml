@@ -9,9 +9,14 @@
         android:background="@drawable/bg"
         android:scaleType="centerCrop" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageView
@@ -51,6 +56,11 @@
                     android:gravity="center_horizontal"
                     android:text="100,000 hot topics" />
 
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" />
+
             </LinearLayout>
 
         </FrameLayout>
@@ -64,7 +74,7 @@
             android:text="Get Started" />
 
         <TextView
-            style="@style/TextViewStyle.Green"
+            style="@style/TextViewStyle.Orange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -80,6 +90,12 @@
             android:paddingBottom="4dp"
             android:text="By continuing, you accept the Term of Use and Privacy Policy" />
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff" />
+
     </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
