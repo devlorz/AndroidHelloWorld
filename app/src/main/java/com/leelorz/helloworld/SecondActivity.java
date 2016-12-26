@@ -51,7 +51,15 @@ public class SecondActivity extends AppCompatActivity {
                 returnIntent.putExtra("result", resultText);
                 setResult(RESULT_OK, returnIntent);
                 finish();
+
             }
         });
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        //
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

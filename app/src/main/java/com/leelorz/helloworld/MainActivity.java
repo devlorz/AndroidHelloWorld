@@ -169,6 +169,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("cParcelable", c3);
 
             startActivityForResult(intent, 12345);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
 
